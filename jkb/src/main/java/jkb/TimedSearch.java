@@ -1,32 +1,40 @@
 package jkb;
 
+
 import java.io.File;
-import java.util.Iterator;
 
 public class TimedSearch extends Thread {
-   public static void startThread() {
-      new Thread();
 
-      while(true) {
-         while(true) {
-            try {
-               System.out.println("STARTED!");
-               File f = new File("data.db");
-               if (f.exists() && !f.isDirectory()) {
-                  Iterator var3 = Main.links.iterator();
+	public static void startThread() {
+		Thread th = new Thread();
+		try {
+			th.sleep(1000* 60 * 1);
+		} catch (InterruptedException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		while (true) {
+			
+			try {
+				
+			System.out.println("STARTED!");
+			File f = new File("data.db");
+			if (f.exists() && !f.isDirectory()) {
+				
+				for (String str : Main.links) {
+					
+					Main.Search(str);
+					th.sleep(300);
+				}
+			}
+			th.sleep(1000 * 60 *  5);
 
-                  while(var3.hasNext()) {
-                     String str = (String)var3.next();
-                     Main.Search(str);
-                     Thread.sleep(300L);
-                  }
-               }
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		}
+		
+	}
 
-               Thread.sleep(300000L);
-            } catch (InterruptedException var4) {
-               var4.printStackTrace();
-            }
-         }
-      }
-   }
 }
