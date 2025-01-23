@@ -1,6 +1,6 @@
 # JasKleinanzeigenBot
 
-Ein kleiner Ebay Kleinanzeigen bot der alle 5 minuten nach Nach den Gefilterten anzeigen guckt und diese dir per Telegram schickt, dafür braucht man einen Telegram Bot Token und den krigst du bei dem BotFather. 
+Ein Kleinanzeigen bot der alle 5 minuten nach Nach den Gefilterten anzeigen sucht und diese dir per Telegram schickt, dafür braucht man einen Telegram Bot Token und den bekommt an bei dem BotFather. 
 Empfohlendes Video: https://www.youtube.com/watch?v=UQrcOj63S2o
 
 # Setup:
@@ -12,13 +12,13 @@ Führe die jar file aus!
 # Commands:
 
 
-/add "link": Fügst du einen Link hinzu 
+/add "link": Fügt einen Link hinzu 
 
 
-/list: Listet dir deine Links auf
+/list: Listet die Links auf
 
 
-/delete "zahl": Löscht du einen Link aus /list
+/delete "zahl": Löscht man einen Link aus /list
 
 
 
